@@ -1,0 +1,33 @@
+@import '../fonts/fonts.scss';
+
+$SFCompact: 'SFCompact';
+
+$secondary: rgb( 69, 69, 69 );
+$secondary_2: rgb( 52, 52, 52 );
+$main_primary_light: #e2f7f7;
+$main_primary: #9ee5e5;
+$main_success_light: #f7e2e2;
+$main_success: #fa7268;
+$black: #333;
+$secondary_light: #666;
+
+
+@mixin bg_primary_success {
+    background: -moz-linear-gradient(90deg, rgba(247,226,226,1) 0%, rgba(226,247,247,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(226,247,247,1)), color-stop(100%, rgba(247,226,226,1)));
+    background: -webkit-linear-gradient(90deg, rgba(247,226,226,1) 0%, rgba(226,247,247,1) 100%);
+    background: -o-linear-gradient(90deg, rgba(247,226,226,1) 0%, rgba(226,247,247,1) 100%);
+    background: -ms-linear-gradient(90deg, rgba(247,226,226,1) 0%, rgba(226,247,247,1) 100%);
+    background: linear-gradient(0deg, rgba(247,226,226,1) 0%, rgba(226,247,247,1) 100%);   
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2f7f7', endColorstr='#f7e2e2',GradientType=0 );
+}
+
+@mixin bg_success_primary {
+    background: -moz-linear-gradient(90deg, rgba(226,247,247,1) 0%, rgba(247,226,226,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(247,226,226,1)), color-stop(100%, rgba(226,247,247,1)));
+    background: -webkit-linear-gradient(90deg, rgba(226,247,247,1) 0%, rgba(247,226,226,1) 100%);
+    background: -o-linear-gradient(90deg, rgba(226,247,247,1) 0%, rgba(247,226,226,1) 100%);
+    background: -ms-linear-gradient(90deg, rgba(226,247,247,1) 0%, rgba(247,226,226,1) 100%);
+    background: linear-gradient(0deg, rgba(226,247,247,1) 0%, rgba(247,226,226,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7e2e2', endColorstr='#e2f7f7',GradientType=0 );
+}

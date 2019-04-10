@@ -1,0 +1,63 @@
+@import './vars.scss';
+@import './font-size.scss';
+
+body {
+    font-family: $SFCompact;
+    padding-top: 120px;
+
+    &::-webkit-scrollbar {
+        width: 4px;
+    }
+     
+    &::-webkit-scrollbar-track {
+        background-color: #a79f9f;
+    }
+     
+    &::-webkit-scrollbar-thumb {
+        background-color: black;
+    }
+}
+
+.black-btn {
+    border: 2px solid $black;
+    color: $secondary_2;
+    font-size: 10px;
+    padding: 0;
+    line-height: 17px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: transparent;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 150px;
+    transition: .3s ease all;  
+    
+    a {
+        padding: 6px 20px;
+        display: block;
+    }
+
+    &:hover {
+        background-color: $main_primary;
+        border-color: $main_primary;
+        color: white;
+        transition: .3s ease all;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.a-link {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+
+    &:hover {
+        text-decoration: none;
+        color: inherit;
+    }
+}

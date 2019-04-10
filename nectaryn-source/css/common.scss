@@ -1,0 +1,144 @@
+@import './vars.scss';
+@import './font-size.scss';
+
+
+main {
+    padding-right: 160px;
+}
+
+@media (max-width: 768px) {
+    main {
+        padding-right: 0;
+    }
+}
+
+.feedback {
+    font-family: $SFCompact;
+    @include bg_success_primary;
+    
+    .bg_image {
+        background-image: url('../images/gold-1.png');
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: 100% 100%;
+        padding: 115px 230px 115px 95px;
+        display: flex;
+        align-items: center;
+    }
+
+    h2 {
+        @include font-size(25px);
+        color: $secondary;
+        text-transform: uppercase;
+        line-height: 1;
+        margin-right: 60px;
+        max-width: 180px;
+
+        .bold {
+            font-weight: bold;
+        }
+    }
+
+    form {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    button[type=submit] {
+        padding: 6px 20px;
+    }
+
+    .label-group {
+        position: relative;
+    }
+
+    label {
+        margin-bottom: 0;
+        position: absolute;
+        top: 0;
+        transition: all .3s ease;
+        color: $black;
+        font-size: 16px;
+
+        &.focus {
+            top: -20px;
+            color: $secondary_light;
+            font-size: 12px;
+        }
+    }
+
+    input {
+        background-color: transparent;
+        padding-bottom: 4px;
+        border: 0;
+        border-bottom: 2px solid $black;
+        width: 200px;
+        color: $secondary_2;
+        font-size: 16px;
+        outline: none;     
+        position: relative;
+    }
+}
+
+@media (max-width: 1350px) {
+    .feedback {
+        .bg_image {
+            padding-right: 95px;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .feedback {
+        .bg_image {
+            flex-direction: column;
+        }
+
+        h2 {
+            margin-right: 0;
+            margin-bottom: 45px;
+            max-width: none;
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .feedback {
+        .bg_image {
+            padding-right: 50px;
+            padding-left: 50px;
+        }
+
+        input {
+            width: 150px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .feedback {
+        .bg_image {
+            padding: 90px 30px;
+            background-image: none;
+        }
+
+        .label-group {
+            margin-bottom: 30px;
+            width: 100%;
+            text-align: center;
+        }
+
+        form {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input {
+            max-width: 260px;
+            width: 100%;
+        }
+    }
+}

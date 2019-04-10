@@ -1,0 +1,227 @@
+@font-face {
+  font-family: 'SFCompact';
+  src: url("../fonts/formats/SFCompactDisplay-Ultralight.eot");
+  src: url("../fonts/formats/SFCompactDisplay-Ultralight.eot?#iefix") format("embedded-opentype"), url("../fonts/formats/SFCompactDisplay-Ultralight.woff2") format("woff2"), url("../fonts/formats/SFCompactDisplay-Ultralight.woff") format("woff"), url("../fonts/formats/SFCompactDisplay-Ultralight.ttf") format("truetype"), url("../fonts/formats/SFCompactDisplay-Ultralight.svg#SFCompactDisplay-Ultralight") format("svg");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SFCompact';
+  src: url("../fonts/formats/SFCompactDisplay-Thin.eot");
+  src: url("../fonts/formats/SFCompactDisplay-Thin.eot?#iefix") format("embedded-opentype"), url("../fonts/formats/SFCompactDisplay-Thin.woff2") format("woff2"), url("../fonts/formats/SFCompactDisplay-Thin.woff") format("woff"), url("../fonts/formats/SFCompactDisplay-Thin.ttf") format("truetype"), url("../fonts/formats/SFCompactDisplay-Thin.svg#SFCompactDisplay-Thin") format("svg");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SFCompact';
+  src: url("../fonts/formats/SFCompactDisplay-Light.eot");
+  src: url("../fonts/formats/SFCompactDisplay-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/formats/SFCompactDisplay-Light.woff2") format("woff2"), url("../fonts/formats/SFCompactDisplay-Light.woff") format("woff"), url("../fonts/formats/SFCompactDisplay-Light.ttf") format("truetype"), url("../fonts/formats/SFCompactDisplay-Light.svg#SFCompactDisplay-Light") format("svg");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SFCompact';
+  src: url("../fonts/formats/SFCompactDisplay-Regular.eot");
+  src: url("../fonts/formats/SFCompactDisplay-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/formats/SFCompactDisplay-Regular.woff2") format("woff2"), url("../fonts/formats/SFCompactDisplay-Regular.woff") format("woff"), url("../fonts/formats/SFCompactDisplay-Regular.ttf") format("truetype"), url("../fonts/formats/SFCompactDisplay-Regular.svg#SFCompactDisplay-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SFCompact';
+  src: url("../fonts/formats/SFCompactDisplay-Medium.eot");
+  src: url("../fonts/formats/SFCompactDisplay-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/formats/SFCompactDisplay-Medium.woff2") format("woff2"), url("../fonts/formats/SFCompactDisplay-Medium.woff") format("woff"), url("../fonts/formats/SFCompactDisplay-Medium.ttf") format("truetype"), url("../fonts/formats/SFCompactDisplay-Medium.svg#SFCompactDisplay-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SFCompact';
+  src: url("../fonts/formats/SFCompactDisplay-Semibold.eot");
+  src: url("../fonts/formats/SFCompactDisplay-Semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/formats/SFCompactDisplay-Semibold.woff2") format("woff2"), url("../fonts/formats/SFCompactDisplay-Semibold.woff") format("woff"), url("../fonts/formats/SFCompactDisplay-Semibold.ttf") format("truetype"), url("../fonts/formats/SFCompactDisplay-Semibold.svg#SFCompactDisplay-Semibold") format("svg");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SFCompact';
+  src: url("../fonts/formats/SFCompactDisplay-Bold.eot");
+  src: url("../fonts/formats/SFCompactDisplay-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/formats/SFCompactDisplay-Bold.woff2") format("woff2"), url("../fonts/formats/SFCompactDisplay-Bold.woff") format("woff"), url("../fonts/formats/SFCompactDisplay-Bold.ttf") format("truetype"), url("../fonts/formats/SFCompactDisplay-Bold.svg#SFCompactDisplay-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SFCompact';
+  src: url("../fonts/formats/SFCompactDisplay-Heavy.eot");
+  src: url("../fonts/formats/SFCompactDisplay-Heavy.eot?#iefix") format("embedded-opentype"), url("../fonts/formats/SFCompactDisplay-Heavy.woff2") format("woff2"), url("../fonts/formats/SFCompactDisplay-Heavy.woff") format("woff"), url("../fonts/formats/SFCompactDisplay-Heavy.ttf") format("truetype"), url("../fonts/formats/SFCompactDisplay-Heavy.svg#SFCompactDisplay-Heavy") format("svg");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SFCompact';
+  src: url("../fonts/formats/SFCompactDisplay-Black.eot");
+  src: url("../fonts/formats/SFCompactDisplay-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/formats/SFCompactDisplay-Black.woff2") format("woff2"), url("../fonts/formats/SFCompactDisplay-Black.woff") format("woff"), url("../fonts/formats/SFCompactDisplay-Black.ttf") format("truetype"), url("../fonts/formats/SFCompactDisplay-Black.svg#SFCompactDisplay-Black") format("svg");
+  font-weight: 900;
+  font-style: normal;
+}
+
+main {
+  padding-right: 160px;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding-right: 0;
+  }
+}
+
+.feedback {
+  font-family: "SFCompact";
+  background: -webkit-gradient(linear, left bottom, left top, from(#e2f7f7), to(#f7e2e2));
+  background: linear-gradient(0deg, #e2f7f7 0%, #f7e2e2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7e2e2', endColorstr='#e2f7f7',GradientType=0 );
+}
+
+.feedback .bg_image {
+  background-image: url("../images/gold-1.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: 100% 100%;
+  padding: 115px 230px 115px 95px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.feedback h2 {
+  font-size: 1.5625rem;
+  color: #454545;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-right: 60px;
+  max-width: 180px;
+}
+
+@media (max-width: 1440px) {
+  .feedback h2 {
+    font-size: calc(0.96625rem + 0.6625vw) ;
+  }
+}
+
+.feedback h2 .bold {
+  font-weight: bold;
+}
+
+.feedback form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.feedback button[type=submit] {
+  padding: 6px 20px;
+}
+
+.feedback .label-group {
+  position: relative;
+}
+
+.feedback label {
+  margin-bottom: 0;
+  position: absolute;
+  top: 0;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  color: #333;
+  font-size: 16px;
+}
+
+.feedback label.focus {
+  top: -20px;
+  color: #666;
+  font-size: 12px;
+}
+
+.feedback input {
+  background-color: transparent;
+  padding-bottom: 4px;
+  border: 0;
+  border-bottom: 2px solid #333;
+  width: 200px;
+  color: #343434;
+  font-size: 16px;
+  outline: none;
+  position: relative;
+}
+
+@media (max-width: 1350px) {
+  .feedback .bg_image {
+    padding-right: 95px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .feedback .bg_image {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .feedback h2 {
+    margin-right: 0;
+    margin-bottom: 45px;
+    max-width: none;
+    text-align: center;
+  }
+}
+
+@media (max-width: 991px) {
+  .feedback .bg_image {
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+  .feedback input {
+    width: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .feedback .bg_image {
+    padding: 90px 30px;
+    background-image: none;
+  }
+  .feedback .label-group {
+    margin-bottom: 30px;
+    width: 100%;
+    text-align: center;
+  }
+  .feedback form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .feedback input {
+    max-width: 260px;
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=common.css.map */
