@@ -87,9 +87,13 @@ body::-webkit-scrollbar-thumb {
   background-color: black;
 }
 
-.black-btn {
-  border: 2px solid #333;
-  color: #343434;
+@media (max-width: 500px) {
+  body {
+    padding-top: 80px;
+  }
+}
+
+.button {
   font-size: 10px;
   padding: 0;
   line-height: 17px;
@@ -103,12 +107,12 @@ body::-webkit-scrollbar-thumb {
   transition: .3s ease all;
 }
 
-.black-btn a {
+.button a {
   padding: 6px 20px;
   display: block;
 }
 
-.black-btn:hover {
+.button:hover {
   background-color: #9ee5e5;
   border-color: #9ee5e5;
   color: white;
@@ -116,8 +120,18 @@ body::-webkit-scrollbar-thumb {
   transition: .3s ease all;
 }
 
-.black-btn:focus {
+.button:focus {
   outline: none;
+}
+
+.black-btn {
+  border: 2px solid #333;
+  color: #343434;
+}
+
+.success-btn {
+  border: 2px solid #fa7268;
+  color: #fa7268;
 }
 
 .a-link {
@@ -131,5 +145,29 @@ body::-webkit-scrollbar-thumb {
 .a-link:hover {
   text-decoration: none;
   color: inherit;
+}
+
+.navigation_menu {
+  font-size: 11px;
+  line-height: 1.455;
+  text-transform: uppercase;
+}
+
+.navigation_menu li a {
+  color: #454545;
+  font-weight: 500;
+  -webkit-transition: color .3s ease;
+  transition: color .3s ease;
+}
+
+.navigation_menu li a:hover {
+  color: #fa7268;
+}
+
+@media (min-width: 250px) {
+  body {
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+  }
 }
 /*# sourceMappingURL=commonClasses.css.map */

@@ -18,23 +18,20 @@
     }
 
     .navigation {
-        font-size: 11px;
-        line-height: 1.455;
-        text-transform: uppercase;
         padding-right: 37px;
+
+        &.hide {
+            visibility: hidden;
+            pointer-events: none;
+            user-select: none; /* supported by Chrome and Opera */
+            -webkit-user-select: none; /* Safari */
+            -khtml-user-select: none; /* Konqueror HTML */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+        }
 
         li {
             padding: 0 17px;
-            
-            a {
-                color: $secondary;
-                font-weight: 500;
-                transition: color .3s ease;
-
-                &:hover {
-                    color: $main_success;
-                }
-            }
         }
     }
 
@@ -43,6 +40,16 @@
         line-height: 1.455;
         text-transform: lowercase;
         padding-left: 67px;
+
+        &.hide {
+            visibility: hidden;
+            pointer-events: none;
+            user-select: none; /* supported by Chrome and Opera */
+            -webkit-user-select: none; /* Safari */
+            -khtml-user-select: none; /* Konqueror HTML */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+        }
 
         li {
             padding: 0 10px;
@@ -233,7 +240,7 @@
     }
 }
 
-@media (min-width: 320px) {
+@media (min-width: 250px) {
     .fullWidthMenu {
         transition: all .3s ease;
     }

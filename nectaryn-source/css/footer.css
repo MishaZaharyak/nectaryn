@@ -69,4 +69,99 @@
   font-weight: 900;
   font-style: normal;
 }
+
+footer.footer {
+  padding: 135px 160px 135px 30px;
+  font-family: "SFCompact";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer.footer > div {
+  max-width: 930px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer.footer .copyright {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  color: #fa7268;
+  position: absolute;
+  left: -40px;
+  font-size: 10px;
+}
+
+footer.footer .logo {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+footer.footer .navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin: 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (max-width: 1100px) {
+  footer.footer {
+    padding-right: 90px;
+  }
+}
+
+@media (max-width: 768px) {
+  footer.footer {
+    padding: 50px 30px 20px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer.footer > div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  footer.footer .copyright {
+    -webkit-transform: rotate(0) translateX(0);
+            transform: rotate(0) translateX(0);
+    position: static;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin-top: 30px;
+  }
+  footer.footer .logo {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin: 0;
+  }
+  footer.footer .navigation {
+    margin-bottom: 30px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 /*# sourceMappingURL=footer.css.map */

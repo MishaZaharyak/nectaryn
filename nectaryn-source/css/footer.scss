@@ -1,1 +1,71 @@
 @import './vars.scss';
+
+footer.footer {
+    padding: 135px 160px 135px 30px;
+    font-family: $SFCompact;
+    display: flex;
+    align-items: center;
+
+    & > div {
+        max-width: 930px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        justify-content: space-between;
+    }
+
+    .copyright {
+        transform: rotate(-90deg);
+        color: $main_success;
+        position: absolute;
+        left: -40px;
+        font-size: 10px;
+    }
+
+    .logo {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .navigation {
+        display: flex;
+        align-items: flex-end;
+        margin: 0;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 1100px) {
+    footer.footer {
+        padding-right: 90px;
+    }
+}
+
+@media (max-width: 768px) {
+    footer.footer {
+        padding: 50px 30px 20px;
+        flex-direction: column;
+
+        & > div {
+            flex-direction: column;
+            width: 100%;
+        }
+    
+        .copyright {
+            transform: rotate(0) translateX(0);
+            position: static;
+            order: 1;
+            margin-top: 30px;
+        }
+    
+        .logo {
+            order: 1;
+            margin: 0;
+        }
+    
+        .navigation {
+            margin-bottom: 30px;
+            justify-content: center;
+        }
+    }
+}

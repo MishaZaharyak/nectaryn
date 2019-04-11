@@ -4,6 +4,13 @@
 
 main {
     padding-right: 160px;
+    transition: all .3s ease;
+}
+
+@media (max-width: 1100px) {
+    main {
+        padding-right: 90px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -12,9 +19,12 @@ main {
     }
 }
 
+// feedback
 .feedback {
     font-family: $SFCompact;
     @include bg_success_primary;
+    font-weight: normal;
+    transition: all .3s ease;
     
     .bg_image {
         background-image: url('../images/gold-1.png');
@@ -24,6 +34,7 @@ main {
         padding: 115px 230px 115px 95px;
         display: flex;
         align-items: center;
+        transition: all .3s ease;
     }
 
     h2 {
@@ -33,9 +44,10 @@ main {
         line-height: 1;
         margin-right: 60px;
         max-width: 180px;
+        transition: all .3s ease;
 
         .bold {
-            font-weight: bold;
+            font-weight: 800;
         }
     }
 
@@ -44,6 +56,7 @@ main {
         align-items: flex-end;
         justify-content: space-between;
         width: 100%;
+        transition: all .3s ease;
     }
 
     button[type=submit] {
@@ -79,6 +92,7 @@ main {
         font-size: 16px;
         outline: none;     
         position: relative;
+        transition: all .3s ease;
     }
 }
 
@@ -142,3 +156,169 @@ main {
         }
     }
 }
+// end feedback
+
+
+// image block
+.image_block {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    max-width: 1100px;
+    margin: auto;
+    font-weight: normal;
+    font-family: $SFCompact;
+    padding: 50px 0 30px;
+    transition: all .3s ease;
+
+    & > div {
+        display: flex;
+        flex-direction: column;
+        margin: 0 15px;
+        align-items: center;
+        justify-content: flex-end;
+        margin-bottom: 50px;
+    }
+
+    h3 {
+        @include font-size(20px);
+        color: $secondary_2;
+        text-transform: uppercase;
+        line-height: 1.1;
+        text-align: center;
+        text-align: center;
+        max-width: 250px;
+        margin-bottom: 40px;
+
+        .bold {
+            font-weight: 800;
+        }
+    }
+
+    img {
+        max-width: 287px;
+        width: 100%;
+    }
+
+    button {
+        margin-top: 35px;
+    }
+}
+
+@media (max-width: 991px) {
+    .image_block {
+        flex-wrap: wrap;
+        padding: 50px 30px 0;
+    }
+}
+// end image block
+
+// advantages
+.advantages {
+    font-family: $SFCompact;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 80px 160px 80px 95px;
+    @include bg_success_primary;
+    transition: all .3s ease;
+
+    .content_block {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        max-width: 1000px;
+        margin-left: auto;
+        transition: all .3s ease;
+
+        & > div {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            max-width: 250px;
+            position: relative;
+            transition: all .3s ease;
+        }
+    }
+
+    .rotate {
+        transform: rotate(-90deg);
+        position: absolute;
+        left: -20px;
+        font-size: 10px;
+        color: $secondary_2;
+        transition: all .3s ease;
+    }
+
+    h4 {
+        font-weight: normal;
+        font-size: 15px;
+        color: $secondary_2;
+        max-width: 250px;
+        line-height: 1.1;
+        text-transform: uppercase;       
+        margin-bottom: 25px;   
+        z-index: 1;
+
+        &::before {
+            content: "";
+            width: 45px;
+            height: 45px;
+            border: 2px solid white;
+            border-radius: 50%;
+            position: absolute;
+            z-index: -1;
+            top: -15px;
+            left: -22px;
+        }
+
+        .bold {
+            font-weight: 800;
+        }
+    }
+
+    p {
+        font-size: 11px;
+        color: $secondary_2;         
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 1400px) {
+    .advantages {
+        padding: 80px 30px 80px 95px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .advantages {
+        flex-direction: column;
+        padding: 80px 30px;
+
+        .rotate {
+            transform: rotate(0);
+            position: static;
+            @include font-size(25px);
+            margin-bottom: 50px;
+
+            .bold {
+                font-weight: 800;
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .advantages {
+        padding: 80px 30px 30px;
+
+        .content_block {
+            flex-wrap: wrap;
+
+            & > div {
+                margin: 0 15px 50px;
+            }
+        }
+    }
+}
+// end advantages
