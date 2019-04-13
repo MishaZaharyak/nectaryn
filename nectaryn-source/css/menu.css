@@ -78,10 +78,14 @@
   top: 0;
   width: 100%;
   padding: 32px 30px 32px 90px;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
 }
 
 .topMenu .logo {
   max-width: 240px;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
 }
 
 .topMenu.fixedNav {
@@ -237,7 +241,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .topMenu {
     padding-right: 30px;
     padding-left: 30px;
@@ -271,6 +275,8 @@
           transform: scale(0.8);
   max-height: 90vh;
   overflow: auto;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
 }
 
 .fullWidthMenu::-webkit-scrollbar {
@@ -305,13 +311,6 @@
 @media (max-width: 500px) {
   .fullWidthMenu {
     top: 79px;
-  }
-}
-
-@media (min-width: 250px) {
-  .fullWidthMenu {
-    -webkit-transition: all .3s ease;
-    transition: all .3s ease;
   }
 }
 /*# sourceMappingURL=menu.css.map */
