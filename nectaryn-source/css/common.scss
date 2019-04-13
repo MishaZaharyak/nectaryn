@@ -451,7 +451,7 @@ main {
             width: 100%;
             border-radius: 3px;
             opacity: .4;
-            transition: all .3s ease;
+            transition: all .5s ease;
         }
 
         h4 {
@@ -646,7 +646,7 @@ main {
     background-image: url('../images/image-1.png');
     background-repeat: no-repeat;
     background-size: 65%;
-    background-position: -40% 0;
+    background-position: -40% 50%;
     max-width: 1440px;
     margin: 0 auto;
     transition: all .3s ease;
@@ -662,7 +662,7 @@ main {
     }
 
     h2 {
-        font-size: 10px;
+        @include font-size(16px);
         color: $secondary_2;
         line-height: 1.6;     
         margin-bottom: 25px;
@@ -673,7 +673,7 @@ main {
     }
 
     .big {
-        @include font-size(50px);
+        @include font-size(40px);
         color: $black;
         text-align: left;       
         font-weight: 800;   
@@ -698,9 +698,9 @@ main {
     }
 }
 
-@media (min-width: 1441px) {
+@media (min-width: 1550px) {
     .big_image_blog {
-        background-position: 0 0;
+        background-position: 0 50%;
     }
 }
 
@@ -708,7 +708,7 @@ main {
     .big_image_blog {
         padding-right: 50px;
         padding-bottom: 100px;
-        background-position: -40% 45%;
+        // background-position: -40% 45%;
     }
 }
 
@@ -726,7 +726,7 @@ main {
     .big_image_blog {
         background-image: none;
         padding: 50px 30px;
-        @include bg_success_primary;
+        @include bg_primary_success;
         text-align: center;
     
         & > div {

@@ -583,8 +583,8 @@ main {
   width: 100%;
   border-radius: 3px;
   opacity: .4;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
 }
 
 .latest_articles .article h4 {
@@ -782,7 +782,7 @@ main {
   background-image: url("../images/image-1.png");
   background-repeat: no-repeat;
   background-size: 65%;
-  background-position: -40% 0;
+  background-position: -40% 50%;
   max-width: 1440px;
   margin: 0 auto;
   -webkit-transition: all .3s ease;
@@ -802,10 +802,16 @@ main {
 }
 
 .big_image_blog h2 {
-  font-size: 10px;
+  font-size: 1rem;
   color: #343434;
   line-height: 1.6;
   margin-bottom: 25px;
+}
+
+@media (max-width: 1440px) {
+  .big_image_blog h2 {
+    font-size: calc(0.91rem + 0.1vw) ;
+  }
 }
 
 .big_image_blog h2 .bold {
@@ -813,7 +819,7 @@ main {
 }
 
 .big_image_blog .big {
-  font-size: 3.125rem;
+  font-size: 2.5rem;
   color: #333;
   text-align: left;
   font-weight: 800;
@@ -823,7 +829,7 @@ main {
 
 @media (max-width: 1440px) {
   .big_image_blog .big {
-    font-size: calc(1.1225rem + 2.225vw) ;
+    font-size: calc(1.06rem + 1.6vw) ;
   }
 }
 
@@ -844,9 +850,9 @@ main {
   margin-top: 30px;
 }
 
-@media (min-width: 1441px) {
+@media (min-width: 1550px) {
   .big_image_blog {
-    background-position: 0 0;
+    background-position: 0 50%;
   }
 }
 
@@ -854,7 +860,6 @@ main {
   .big_image_blog {
     padding-right: 50px;
     padding-bottom: 100px;
-    background-position: -40% 45%;
   }
 }
 
@@ -871,9 +876,9 @@ main {
   .big_image_blog {
     background-image: none;
     padding: 50px 30px;
-    background: -webkit-gradient(linear, left bottom, left top, from(#e2f7f7), to(#f7e2e2));
-    background: linear-gradient(0deg, #e2f7f7 0%, #f7e2e2 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7e2e2', endColorstr='#e2f7f7',GradientType=0 );
+    background: -webkit-gradient(linear, left bottom, left top, from(#f7e2e2), to(#e2f7f7));
+    background: linear-gradient(0deg, #f7e2e2 0%, #e2f7f7 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2f7f7', endColorstr='#f7e2e2',GradientType=0 );
     text-align: center;
   }
   .big_image_blog > div {
