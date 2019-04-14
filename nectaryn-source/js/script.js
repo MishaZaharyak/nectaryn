@@ -2,8 +2,14 @@ function fixedMenu() {
   const windowScroll = window.scrollY;
   const menu = document.querySelector('.topMenu')
   const topOfMenu = menu.offsetTop;
+  var fullWidthMenu = $('.fullWidthMenu');
 
-  (windowScroll > topOfMenu) ? menu.classList.add('fixedNav') : menu.classList.remove('fixedNav');
+  if (windowScroll > topOfMenu) {
+    if (!fullWidthMenu.hasClass('show')) menu.classList.add('fixedNav');
+
+  } else {
+    menu.classList.remove('fixedNav');
+  }
 }
 
 $(window).scroll(function() {
@@ -45,6 +51,7 @@ $(document).ready(function() {
       
       $(topmenuNav).addClass('hide');
       $(languages).addClass('hide');
+      $(menu).removeClass('fixedNav');
 
       $(fullWidthMenu).removeClass('hide').addClass('show');
 
@@ -81,11 +88,3 @@ $(document).on('click', '.navigation a', e => {
 $('.navbar-brand').on('click', function(e) {
   $('.navigation a').each((i, el) => $(el).parent().removeClass('active'))
 })
-
-// pagination active page
-// $(document).on('click', '.pagination a:not(.nav-arrow)', function(e) {
-//   $('.pagination a').each(function(i, el) {
-//     $(el).parent().removeClass('active')
-//   })
-//   $(e.target).parent().addClass('active')
-// });
