@@ -299,7 +299,7 @@
         background-position: -10% 100%;
         background-size: 46%;
         font-family: $SFCompact;
-        padding: 95px 30px 95px 90px;
+        padding: 60px 30px 95px 90px;
         height: 100%;
         width: 100%;
         overflow: auto;
@@ -414,7 +414,7 @@
             }
 
             &:not(:first-child) {
-                margin: 10px 0;
+                margin: 5px 0;
                 color: $main_success;
                 transition: color .3s ease;
 
