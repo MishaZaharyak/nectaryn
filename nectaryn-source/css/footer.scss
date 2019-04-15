@@ -48,15 +48,18 @@ footer.footer {
         display: none;
         transition: all .3s ease;
 
-        img {
-            max-width: 22px;
-            max-height: 22px;
+        span {
             margin: 10px;
-            transform: scale(1);
-            transition: transform .5s ease;
             cursor: pointer;
+        }
+
+        svg {
+            transform: scale(1);
+            fill: $main_success;
+            transition: transform .5s ease;
 
             &:hover {
+                fill: $main_primary;
                 transform: scale(1.1)
             }
         }

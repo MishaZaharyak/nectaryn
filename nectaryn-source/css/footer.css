@@ -143,20 +143,23 @@ footer.footer .footer_socials {
   transition: all .3s ease;
 }
 
-footer.footer .footer_socials img {
-  max-width: 22px;
-  max-height: 22px;
+footer.footer .footer_socials span {
   margin: 10px;
+  cursor: pointer;
+}
+
+footer.footer .footer_socials svg {
   -webkit-transform: scale(1);
           transform: scale(1);
+  fill: #fa7268;
   -webkit-transition: -webkit-transform .5s ease;
   transition: -webkit-transform .5s ease;
   transition: transform .5s ease;
   transition: transform .5s ease, -webkit-transform .5s ease;
-  cursor: pointer;
 }
 
-footer.footer .footer_socials img:hover {
+footer.footer .footer_socials svg:hover {
+  fill: #9ee5e5;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }

@@ -3,6 +3,7 @@
 
 body {
     font-family: $SFCompact;
+    font-weight: normal;
     padding-top: 120px;
     transition: padding .3s ease;
     color: $black;
@@ -102,19 +103,23 @@ body {
     position: fixed;
     width: 29px;
     align-items: center;
-    right: calc((160px / 2) - (29px / 2));
+    right: calc((100px / 2) - (29px / 2));
     top: 135px;
     transition: right .3s ease;
 
-    img {
-        max-width: 22px;
-        max-height: 22px;
+    span {
         margin-bottom: 10px;
-        transform: scale(1);
-        transition: transform .5s ease;
         cursor: pointer;
+    }
+
+    svg {
+        width: 100%;
+        transform: scale(1);
+        fill: $main_success;
+        transition: all .5s ease;
 
         &:hover {
+            fill: $main_primary;
             transform: scale(1.1)
         }
     }
@@ -122,7 +127,7 @@ body {
 
 @media (max-width: 1100px) {
     .fixed_socials {
-        right: calc((90px / 2) - (29px / 2));;
+        right: calc((90px / 2) - (29px / 2));
     }
 }
 
@@ -131,6 +136,7 @@ body {
         display: none;
     }
 }
+
 .section_header {
     @include font-size(25px);
     color: $secondary_2;

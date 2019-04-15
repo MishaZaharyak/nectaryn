@@ -196,7 +196,7 @@
   font-size: 11px;
   line-height: 1.455;
   text-transform: lowercase;
-  padding-left: 67px;
+  padding-left: 55px;
 }
 
 .topMenu .languages.hide {
@@ -215,7 +215,7 @@
 }
 
 .topMenu .languages li {
-  padding: 0 10px;
+  padding: 0 8px;
 }
 
 .topMenu .languages li a {
@@ -338,7 +338,7 @@
   top: 118px;
   left: 0;
   height: 99vh;
-  width: calc(100% - 155px);
+  width: calc(100% - 98px);
   position: absolute;
   z-index: -1;
   opacity: 0;
@@ -385,7 +385,7 @@
   background-image: url("../images/plant.png");
   background-repeat: no-repeat;
   background-position: -10% 100%;
-  background-size: 46%;
+  background-size: 43%;
   font-family: "SFCompact";
   padding: 60px 30px 95px 90px;
   height: 100%;
@@ -598,8 +598,31 @@
   .fullWidthMenu .mobile_menu .main_li {
     margin: 20px 0;
   }
+  .fullWidthMenu .mobile_menu .main_li.opened_menu > span svg {
+    fill: #fa7268;
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
   .fullWidthMenu .mobile_menu .main_li > a {
     color: #707070;
+    margin-left: 36px;
+  }
+  .fullWidthMenu .mobile_menu .main_li > span {
+    display: inline-block;
+    padding: 0px 0 0 10px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  .fullWidthMenu .mobile_menu .main_li > span:hover svg {
+    fill: #fa7268;
+  }
+  .fullWidthMenu .mobile_menu .main_li > span svg {
+    width: 16px;
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+    fill: #707070;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
   }
   .fullWidthMenu .mobile_menu .main_li ul li {
     margin: 10px 0;

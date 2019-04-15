@@ -72,6 +72,7 @@
 
 body {
   font-family: "SFCompact";
+  font-weight: normal;
   padding-top: 120px;
   -webkit-transition: padding .3s ease;
   transition: padding .3s ease;
@@ -180,26 +181,28 @@ body::-webkit-scrollbar-thumb {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  right: calc((160px / 2) - (29px / 2));
+  right: calc((100px / 2) - (29px / 2));
   top: 135px;
   -webkit-transition: right .3s ease;
   transition: right .3s ease;
 }
 
-.fixed_socials img {
-  max-width: 22px;
-  max-height: 22px;
+.fixed_socials span {
   margin-bottom: 10px;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: -webkit-transform .5s ease;
-  transition: -webkit-transform .5s ease;
-  transition: transform .5s ease;
-  transition: transform .5s ease, -webkit-transform .5s ease;
   cursor: pointer;
 }
 
-.fixed_socials img:hover {
+.fixed_socials svg {
+  width: 100%;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  fill: #fa7268;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.fixed_socials svg:hover {
+  fill: #9ee5e5;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }

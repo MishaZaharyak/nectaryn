@@ -21,6 +21,9 @@ $(document).ready(function() {
   // fixed menu 
   fixedMenu();
 
+  // mobile menu open sub menu
+  openMobileSubmenu();
+
   // feedback input animation
   var feedback = $('.feedback');
 
@@ -88,3 +91,35 @@ $(document).on('click', '.navigation a', e => {
 $('.navbar-brand').on('click', function(e) {
   $('.navigation a').each((i, el) => $(el).parent().removeClass('active'))
 })
+
+// open mobile submenus
+function openMobileSubmenu() {
+  var menu = $('.mobile_menu');
+  $(menu).find(".main_li > span.arrow").unbind();
+          
+  $(menu).find(".main_li").each(function() {
+    $(this).removeClass("opened_menu");
+
+    if($(this).children("ul").length > 0) {
+      $(this).children("ul").slideUp(500);
+      $(this).children("span.arrow").on("click", function(event) {
+
+        if(!$(this).parent().hasClass("opened_menu")) {
+          $(this).parent().addClass("opened_menu");
+          $(this).parent().siblings("li").removeClass("opened_menu");
+          
+          $(this).siblings("ul").slideDown(500);
+          $(this).parent().siblings("li").children("ul").slideUp(500);
+
+          return false;
+        }
+
+        else {
+          $(this).parent().removeClass("opened_menu");
+          $(this).siblings("ul").slideUp(300);
+          return false;
+        }
+      });
+    }
+  });
+}
