@@ -5,8 +5,12 @@ body {
     font-family: $SFCompact;
     font-weight: normal;
     padding-top: 120px;
-    transition: padding .3s ease;
+    transition: padding .5s ease;
     color: $black;
+
+    &.fixedNav {
+        padding-top: 56px;
+    }
 
     &::-webkit-scrollbar {
         width: 6px;
@@ -24,6 +28,10 @@ body {
 @media (max-width: 500px) {
     body {
         padding-top: 80px;
+
+        &.fixedNav {
+            padding-top: 56px;
+        }
     }
 }
 
@@ -177,4 +185,8 @@ body {
         width: 30%;
         background-color: $main_success_light;
     }
+}
+
+.wraper {
+    width: 100%;
 }

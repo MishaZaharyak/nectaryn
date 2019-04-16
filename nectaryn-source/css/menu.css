@@ -70,28 +70,36 @@
   font-style: normal;
 }
 
+.navbar_wraper {
+  position: fixed;
+  z-index: 100;
+  background-color: white;
+  top: 0;
+}
+
+.navbar_wraper.fixedNav {
+  -webkit-box-shadow: -1px -6px 10px black;
+          box-shadow: -1px -6px 10px black;
+}
+
 .topMenu {
   font-family: "SFCompact";
-  background-color: white;
-  z-index: 100;
   font-weight: normal;
-  position: fixed;
-  top: 0;
-  width: 100%;
   padding: 0 30px 0 90px;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+  max-width: 1628px;
+  margin: 0 auto;
+  -webkit-transition: all .3s ease, padding-top .5s ease;
+  transition: all .3s ease, padding-top .5s ease;
+}
+
+.topMenu.fixedNav .navigation li {
+  padding: 12px 17px;
 }
 
 .topMenu .logo {
   max-width: 240px;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
-}
-
-.topMenu.fixedNav {
-  -webkit-box-shadow: -1px -6px 10px black;
-          box-shadow: -1px -6px 10px black;
 }
 
 .topMenu .navigation {
@@ -115,6 +123,8 @@
 
 .topMenu .navigation li {
   padding: 44px 17px;
+  -webkit-transition: padding .5s ease;
+  transition: padding .5s ease;
 }
 
 .topMenu .has_children {
@@ -308,6 +318,10 @@
 @media (max-width: 1100px) {
   .topMenu {
     padding: 32px 90px;
+  }
+  .topMenu.fixedNav {
+    padding-top: 0;
+    padding-bottom: 0;
   }
   .topMenu .navigation {
     display: none;

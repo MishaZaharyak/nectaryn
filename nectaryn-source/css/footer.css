@@ -71,7 +71,7 @@
 }
 
 footer.footer {
-  padding: 135px 160px 135px 30px;
+  padding: 135px 50px 135px 30px;
   font-family: "SFCompact";
   display: -webkit-box;
   display: -ms-flexbox;
@@ -81,9 +81,15 @@ footer.footer {
           align-items: center;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
+  position: relative;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
-footer.footer > div {
+footer.footer .nav_cont {
   max-width: 930px;
   width: 100%;
   display: -webkit-box;
@@ -164,9 +170,126 @@ footer.footer .footer_socials svg:hover {
           transform: scale(1.1);
 }
 
-@media (max-width: 1100px) {
+footer.footer .contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-left: 50px;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+footer.footer .contacts > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+footer.footer .contacts button {
+  font-size: 10px;
+  padding: 6px 20px;
+  line-height: 17px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #9ee5e5;
+  color: #333;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 150px;
+  border: none;
+  margin: 5px 0 15px;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+}
+
+footer.footer .contacts button:hover {
+  background-color: #fa7268;
+  color: white;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+}
+
+footer.footer .contacts button:focus {
+  outline: none;
+}
+
+footer.footer .contacts a {
+  font-size: 13px;
+  color: #333;
+  margin-bottom: 5px;
+  -webkit-transition: color .3s ease;
+  transition: color .3s ease;
+}
+
+footer.footer .contacts a:hover {
+  color: #fa7268;
+}
+
+footer.footer .contacts p {
+  font-size: 11px;
+  color: #333;
+  width: 150px;
+  font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 3px;
+  border-bottom: 1px solid rgba(51, 51, 51, 0.253);
+}
+
+@media (max-width: 991px) {
   footer.footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     padding-right: 90px;
+    padding-bottom: 50px;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  footer.footer .contacts {
+    margin-left: 0;
+    margin-top: 50px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  footer.footer .contacts > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer.footer .contacts > div:first-child {
+    margin-right: 100px;
+  }
+  footer.footer .contacts button {
+    margin-top: 0;
   }
 }
 
@@ -177,8 +300,11 @@ footer.footer .footer_socials svg:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  footer.footer > div {
+  footer.footer .nav_cont {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -213,6 +339,23 @@ footer.footer .footer_socials svg:hover {
     display: -ms-flexbox;
     display: flex;
     margin-bottom: 30px;
+  }
+  footer.footer .contacts {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 20px;
+    margin-top: 40px;
+  }
+  footer.footer .contacts > div:first-child {
+    margin-right: 0;
+  }
+  footer.footer .contacts button {
+    margin-top: 5px;
   }
 }
 /*# sourceMappingURL=footer.css.map */

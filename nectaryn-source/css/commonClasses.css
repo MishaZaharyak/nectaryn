@@ -74,9 +74,13 @@ body {
   font-family: "SFCompact";
   font-weight: normal;
   padding-top: 120px;
-  -webkit-transition: padding .3s ease;
-  transition: padding .3s ease;
+  -webkit-transition: padding .5s ease;
+  transition: padding .5s ease;
   color: #333;
+}
+
+body.fixedNav {
+  padding-top: 56px;
 }
 
 body::-webkit-scrollbar {
@@ -94,6 +98,9 @@ body::-webkit-scrollbar-thumb {
 @media (max-width: 500px) {
   body {
     padding-top: 80px;
+  }
+  body.fixedNav {
+    padding-top: 56px;
   }
 }
 
@@ -268,5 +275,9 @@ body::-webkit-scrollbar-thumb {
   height: 2px;
   width: 30%;
   background-color: #f7e2e2;
+}
+
+.wraper {
+  width: 100%;
 }
 /*# sourceMappingURL=commonClasses.css.map */

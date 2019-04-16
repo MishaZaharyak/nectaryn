@@ -20,11 +20,15 @@ main {
 }
 
 // feedback
+.feedback_wraper {
+    @include bg_success_primary;
+}
+
 .feedback {
     font-family: $SFCompact;
-    @include bg_success_primary;
     font-weight: normal;
     transition: all .3s ease;
+    @include max_width;
     
     .bg_image {
         background-image: url('../images/gold-1.png');
@@ -238,14 +242,18 @@ main {
 // end image block
 
 // advantages
+.advantages_wraper {
+    @include bg_success_primary;
+}
+
 .advantages {
     font-family: $SFCompact;
     position: relative;
     display: flex;
     align-items: center;
     padding: 80px 160px 80px 95px;
-    @include bg_success_primary;
     transition: all .3s ease;
+    @include max_width;
 
     .content_block {
         display: flex;
@@ -353,6 +361,7 @@ main {
     font-family: $SFCompact;
     padding: 50px 0 50px 65px;
     transition: all .3s ease;
+    @include max_width;
 
     & > div {
         transition: all .3s ease;
@@ -417,6 +426,7 @@ main {
     text-align: center;
     padding: 50px 30px;
     font-family: $SFCompact;
+    @include max_width;
 
     & > div {
         display: flex;
@@ -539,6 +549,7 @@ main {
     font-family: $SFCompact;
     transition: all .3s ease;
     font-weight: normal;
+    @include max_width;
 
     .first {
         transition: all .3s ease;
@@ -680,8 +691,7 @@ main {
     background-repeat: no-repeat;
     background-size: 65%;
     background-position: -40% 50%;
-    max-width: 1440px;
-    margin: 0 auto;
+    @include max_width;
     transition: all .3s ease;
 
     & > div {
@@ -798,8 +808,7 @@ main {
 
 // latest works
 .latest_works {
-    max-width: 1440px;
-    margin: auto;
+    @include max_width;
     padding: 50px 0 50px 50px;
     text-align: center;
     font-family: $SFCompact;

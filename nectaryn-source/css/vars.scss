@@ -32,3 +32,8 @@ $secondary_light_2: #707070;
     background: linear-gradient(0deg, $main_primary_light 0%, $main_success_light 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7e2e2', endColorstr='#e2f7f7',GradientType=0 );
 }
+
+@mixin max_width {
+    max-width: 1440px;
+    margin: 0 auto;
+}
