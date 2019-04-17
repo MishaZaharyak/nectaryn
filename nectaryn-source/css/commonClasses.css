@@ -194,9 +194,8 @@ body::-webkit-scrollbar-thumb {
   transition: right .3s ease;
 }
 
-.fixed_socials span {
+.fixed_socials a {
   margin-bottom: 10px;
-  cursor: pointer;
 }
 
 .fixed_socials svg {
@@ -246,6 +245,10 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
+.section_header.white::before {
+  border: 2px solid white;
+}
+
 .section_header::before {
   content: "";
   width: 45px;
@@ -279,5 +282,36 @@ body::-webkit-scrollbar-thumb {
 
 .wraper {
   width: 100%;
+}
+
+.breadCrumb {
+  font-family: "SFCompact";
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.breadCrumb span {
+  font-size: 0.6875rem;
+  -webkit-transition: color .3s ease;
+  transition: color .3s ease;
+}
+
+.breadCrumb span a {
+  color: white;
+  -webkit-transition: color .3s ease;
+  transition: color .3s ease;
+  white-space: pre;
+  font-weight: bold;
+}
+
+.breadCrumb span a:hover {
+  color: #fa7268;
+}
+
+.breadCrumb span.angle svg {
+  height: 7px;
+  width: 10px;
+  fill: white;
+  margin-bottom: 1px;
 }
 /*# sourceMappingURL=commonClasses.css.map */

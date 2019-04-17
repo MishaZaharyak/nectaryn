@@ -115,9 +115,8 @@ body {
     top: 135px;
     transition: right .3s ease;
 
-    span {
+    a {
         margin-bottom: 10px;
-        cursor: pointer;
     }
 
     svg {
@@ -154,6 +153,12 @@ body {
     position: relative;
     max-width: max-content;
     transition: all .3s ease;
+
+    &.white {
+        &::before {
+            border: 2px solid white;
+        }
+    }
     
     &::before {
         content: "";
@@ -189,4 +194,32 @@ body {
 
 .wraper {
     width: 100%;
+}
+
+.breadCrumb {
+    font-family: $SFCompact;
+    transition: all .3s ease;
+
+    span {
+        @include font-size(11px);
+        transition: color .3s ease;
+
+        a {
+            color: white;
+            transition: color .3s ease;
+            white-space: pre;
+            font-weight: bold;
+
+            &:hover {
+                color: $main_success;
+            }
+        }
+    }
+
+    span.angle svg {
+        height: 7px;
+        width: 10px;
+        fill: white;
+        margin-bottom: 1px;
+    }
 }

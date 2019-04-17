@@ -22,6 +22,14 @@ main {
 // feedback
 .feedback_wraper {
     @include bg_success_primary;
+
+    &.withpout_bg_image {
+        background: $main_success_light;
+
+        .feedback .bg_image {
+            background-image: none;
+        }
+    }
 }
 
 .feedback {
@@ -42,30 +50,12 @@ main {
     }
 
     h2 {
-        @include font-size(25px);
-        color: $secondary;
-        text-transform: uppercase;
         line-height: 1;
         margin-right: 60px;
         max-width: 180px;
-        z-index: 1;
-        position: relative;
-        transition: all .3s ease;
 
         &::before {
-            content: "";
-            width: 45px;
-            height: 45px;
-            border: 2px solid white;
-            border-radius: 50%;
-            position: absolute;
-            z-index: -1;
-            top: calc(50% - 45px / 2);
             left: -22px;
-        }
-
-        .bold {
-            font-weight: 800;
         }
     }
 
@@ -184,6 +174,12 @@ main {
         }
     }
 }
+
+// contact page
+.contact-page .feedback .bg_image {
+    padding-top: 50px;
+}
+// end contact page
 // end feedback
 
 
@@ -1008,3 +1004,133 @@ main {
     }
 }
 // end latest works
+
+
+// contacts page
+// contacts section
+.contact_wraper {
+    @include bg_more_primary;
+    margin-bottom: -1px;
+    position: relative;
+
+    &::after {
+        content: '';
+        background-image: url('../images/plant-2.png');
+        background-repeat: no-repeat;
+        background-size: 50% auto;
+        background-position: 100% 100%;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+.contact_section {
+    font-family: $SFCompact;
+    font-weight: normal;
+    padding: 80px 0 80px 95px;
+    transition: all .3s ease;
+    @include max_width;
+
+    .header, .phones, .email {
+        max-width: 275px;
+        transition: all .3s ease;
+    }
+
+    .phones, .email {
+        display: flex;
+        flex-direction: column;
+
+        & > a {
+            line-height: 1.3;
+        }
+    }
+
+    .email {
+        a {
+            margin-bottom: 10px;
+        }
+    }
+
+    h2 {
+        max-width: 130px;
+        line-height: 1;
+        transition: all .3s ease;
+    }
+
+    .name {
+        font-size: 11px;
+        color: secondary_2;
+        text-transform: uppercase;
+        opacity: .4;
+        padding-bottom: 10px;
+        border-bottom: 1px solid $black;
+        max-width: 215px;
+    }
+
+    .socials {
+        margin-top: 15px;
+        transition: all .3s ease;
+
+        a:first-child {
+            margin-right: 5px;
+        }
+
+        svg {
+            transform: scale(1);
+            fill: $main_success;
+            transition: transform .5s ease;
+
+            &:hover {
+                fill: $main_primary;
+                transform: scale(1.1)
+            }
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    .contact_section {
+        padding-left: 50px;
+    }
+}
+
+@media (max-width: 991px) {
+    .contact_section {
+        padding: 50px 30px 50px 30px;
+
+        .row {
+            justify-content: center;
+        }
+
+        .header {
+            max-width: none;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        h2 {
+            max-width: none;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .contact_section {
+    
+        .phones, .email {
+            max-width: none;
+            align-items: center;
+        }
+
+        .phones {
+            order: 1;
+        }
+    }
+}
+// end contacts section
+// end contacts page
