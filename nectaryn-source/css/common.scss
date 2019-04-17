@@ -1033,6 +1033,8 @@ main {
     padding: 80px 0 80px 95px;
     transition: all .3s ease;
     @include max_width;
+    position: relative;
+    z-index: 1;
 
     .header, .phones, .email {
         max-width: 275px;

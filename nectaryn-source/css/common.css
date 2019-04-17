@@ -1210,6 +1210,8 @@ main {
   transition: all .3s ease;
   max-width: 1440px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .contact_section .header, .contact_section .phones, .contact_section .email {
