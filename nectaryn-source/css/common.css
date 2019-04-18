@@ -1257,8 +1257,6 @@ main {
 
 .contact_section .socials {
   margin-top: 15px;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
 }
 
 .contact_section .socials a:first-child {
@@ -1326,6 +1324,128 @@ main {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
+  }
+}
+
+.page_not_found_wraper {
+  background: -webkit-gradient(linear, left bottom, left top, from(#f7e2e2), to(#e2f7f7));
+  background: linear-gradient(0deg, #f7e2e2 0%, #e2f7f7 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2f7f7', endColorstr='#f7e2e2',GradientType=0 );
+  position: relative;
+}
+
+.page_not_found_wraper::after {
+  content: '';
+  background-image: url("../images/stone.png");
+  background-repeat: no-repeat;
+  background-size: 35% auto;
+  background-position: 100% 50%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.page_not_found {
+  position: relative;
+  z-index: 1;
+  padding: 90px 0 90px 90px;
+  font-family: "SFCompact";
+  max-width: 1440px;
+  margin: 0 auto;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.page_not_found .header, .page_not_found .navigate_cont {
+  max-width: 435px;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.page_not_found .header p {
+  font-size: 11px;
+  color: #333;
+  line-height: 1.364;
+  font-weight: 500;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.page_not_found .breadCrumb {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.page_not_found h2 {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.page_not_found h2 .sad_face {
+  color: #fa7268;
+  font-weight: 700;
+  margin-left: 5px;
+  display: inline-block;
+}
+
+.page_not_found .navigate_cont p {
+  font-size: 11px;
+  color: #fa7268;
+}
+
+.page_not_found .navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin: 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.page_not_found .navigation li:first-child a {
+  padding-left: 0;
+}
+
+@media (max-width: 767px) {
+  .page_not_found_wraper::after {
+    background-image: none;
+  }
+  .page_not_found {
+    padding: 50px 30px;
+  }
+  .page_not_found .header, .page_not_found .navigate_cont {
+    margin: auto;
+  }
+  .page_not_found .header p {
+    margin-top: 10px;
+  }
+  .page_not_found h2 {
+    text-align: center;
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    max-width: max-content;
+    margin: auto;
+  }
+  .page_not_found .breadCrumb {
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    max-width: max-content;
+    margin: auto;
+  }
+  .page_not_found .navigate_cont p {
+    text-align: center;
+  }
+  .page_not_found .navigation {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 /*# sourceMappingURL=common.css.map */

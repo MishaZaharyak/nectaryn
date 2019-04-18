@@ -1074,7 +1074,6 @@ main {
 
     .socials {
         margin-top: 15px;
-        transition: all .3s ease;
 
         a:first-child {
             margin-right: 5px;
@@ -1136,3 +1135,114 @@ main {
 }
 // end contacts section
 // end contacts page
+
+
+// 404 page
+.page_not_found_wraper {
+    @include bg_primary_success;
+    position: relative;
+
+    &::after {
+        content: '';
+        background-image: url('../images/stone.png');
+        background-repeat: no-repeat;
+        background-size: 35% auto;
+        background-position: 100% 50%;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+.page_not_found {
+    position: relative;
+    z-index: 1;
+    padding: 90px 0 90px 90px;
+    font-family: $SFCompact;
+    @include max_width;
+    transition: all .3s ease;
+
+    .header, .navigate_cont {
+        max-width: 435px;
+        transition: all .3s ease;
+    }
+
+    .header p {
+        font-size: 11px;
+        color: $black;
+        line-height: 1.364;       
+        font-weight: 500;      
+        transition: all .3s ease; 
+    }
+
+     .breadCrumb {
+        transition: all .3s ease;
+     }
+
+    h2 {
+        transition: all .3s ease;
+        
+        .sad_face {
+            color: $main_success;
+            font-weight: 700;
+            margin-left: 5px;
+            display: inline-block;
+        }
+    }
+
+    .navigate_cont p {
+        font-size: 11px;
+        color: $main_success;
+    }
+
+    .navigation {
+        display: flex;
+        align-items: flex-end;
+        margin: 0;
+        flex-wrap: wrap;
+        transition: all .3s ease;
+
+        li:first-child a {
+            padding-left: 0;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .page_not_found_wraper::after {
+        background-image: none;
+    }
+    .page_not_found {
+        padding: 50px 30px;
+    
+        .header, .navigate_cont {
+            margin: auto;
+        }
+    
+        .header p {
+            margin-top: 10px;  
+        }
+    
+        h2 {
+           text-align: center;
+           max-width: max-content;
+           margin: auto;
+        }
+
+        .breadCrumb {
+            max-width: max-content;
+            margin: auto;
+        }
+    
+        .navigate_cont p {
+            text-align: center;
+        }
+    
+        .navigation {
+            justify-content: center;
+        }
+    }
+}
+// end 404 page
