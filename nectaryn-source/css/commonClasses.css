@@ -269,6 +269,8 @@ body::-webkit-scrollbar-thumb {
   font-size: 11px;
   color: #343434;
   line-height: 1.3;
+  position: relative;
+  padding-top: 37px;
 }
 
 .line_top::before {
@@ -288,6 +290,14 @@ body::-webkit-scrollbar-thumb {
   font-family: "SFCompact";
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
+}
+
+.breadCrumb.breadCrumb_dark span a {
+  color: #333;
+}
+
+.breadCrumb.breadCrumb_dark span.angle svg {
+  fill: #333;
 }
 
 .breadCrumb span {
@@ -313,5 +323,42 @@ body::-webkit-scrollbar-thumb {
   width: 10px;
   fill: white;
   margin-bottom: 1px;
+}
+
+.quote h4 {
+  font-size: 11px;
+  color: #fa7268;
+  text-transform: uppercase;
+  line-height: 1.636;
+  position: relative;
+  padding-left: 70px;
+  margin-bottom: 25px;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.quote h4::before {
+  content: '';
+  width: 45px;
+  height: 33px;
+  position: absolute;
+  left: 0;
+  top: -5px;
+  background-image: url("../images/quotes.png");
+  background-repeat: no-repeat;
+}
+
+.quote p {
+  font-size: 1.25rem;
+  color: #343434;
+  font-weight: bold;
+  line-height: 1.2;
+  max-width: 285px;
+}
+
+@media (max-width: 1440px) {
+  .quote p {
+    font-size: calc(0.935rem + 0.35vw) ;
+  }
 }
 /*# sourceMappingURL=commonClasses.css.map */
