@@ -159,6 +159,12 @@ body {
             border: 2px solid white;
         }
     }
+
+    &.success {
+        &::before {
+            border: 2px solid $main_success_light;
+        }
+    }
     
     &::before {
         content: "";
@@ -191,6 +197,10 @@ body {
         height: 2px;
         width: 30%;
         background-color: $main_success_light;
+    }
+
+    &.line_primary::before {
+        background-color: $main_primary_light;
     }
 }
 

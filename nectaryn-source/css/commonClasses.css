@@ -249,6 +249,10 @@ body::-webkit-scrollbar-thumb {
   border: 2px solid white;
 }
 
+.section_header.success::before {
+  border: 2px solid #f7e2e2;
+}
+
 .section_header::before {
   content: "";
   width: 45px;
@@ -280,6 +284,10 @@ body::-webkit-scrollbar-thumb {
   height: 2px;
   width: 30%;
   background-color: #f7e2e2;
+}
+
+.line_top.line_primary::before {
+  background-color: #e2f7f7;
 }
 
 .wraper {

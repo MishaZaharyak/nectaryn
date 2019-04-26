@@ -1684,7 +1684,75 @@ main {
 
 
 // services page
-.content_block_wraper {
+
+.small_header {
+    position: relative;
+
+    &::after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 30px;
+        background-color: $main_primary_light;
+        top: 15px;
+        width: 100%;
+        max-width: 230px;
+        transition: all .3s ease;
+    }
+
+    & > div {
+        @include max_width;
+        padding: 30px 0 30px 70px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .breadCrumb {
+        margin-left: 70px;
+
+        a {
+            color: $secondary_light_2;
+        }
+
+        span.angle svg {
+            fill: $secondary_light_2;
+        }
+    }
+}
+
+@media (min-width: 1530px) {
+    .small_header::after {
+        max-width: none;
+        width: 25%;
+    }
+}
+
+@media (max-width: 767px) {
+    .small_header::after {
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 500px) {
+    .small_header {
+    
+        &::after {
+            max-width: none;
+        }
+    
+        & > div {
+            flex-direction: column;
+            align-items: center;
+            padding: 30px;
+        }
+    
+        .breadCrumb {
+            margin-left: 0;
+        }
+    }
+}
+
+.service_content_block_wraper {
     @include bg_primary_success;
     position: relative;
 
@@ -1701,7 +1769,7 @@ main {
     }
 }
 
-.content_block {
+.service_content_block {
     @include max_width; 
     align-items: center;
     justify-content: flex-end;
@@ -1747,14 +1815,14 @@ main {
 }
 
 @media (max-width: 1190px) {
-    .content_block .categories {
+    .service_content_block .categories {
         max-width: 520px;
         padding-right: 50px;
     }
 }
 
 @media (max-width: 991px) {
-    .content_block {
+    .service_content_block {
         padding: 50px 30px;
 
         .categories {
@@ -1777,8 +1845,97 @@ main {
 }
 
 @media (max-width: 767px) {
-    .content_block_wraper::after {
+    .service_content_block_wraper::after {
         content: none;
+    }
+}
+
+.image_content_block {
+    @include max_width;
+    align-items: flex-start;
+    justify-content: flex-end;
+    font-family: $SFCompact;
+    padding: 0 0 70px;
+    transition: all .3s ease;
+
+    img {
+        max-width: 500px;
+        width: 100%;
+    }
+
+    .text_block, .service_list {
+        margin-top: 40px;
+    }
+
+    .text_block {
+        min-width: 225px;
+        max-width: 225px;
+        color: $black;
+        transition: all .3s ease;
+
+        p {
+            line-height: 1.4;
+        }
+    }
+
+    .service_list {
+        min-width: 275px;
+        margin-right: 90px;
+        transition: all .3s ease;
+    }
+
+    ul {
+        padding-left: 20px;
+
+        li {
+            font-size: 13px;
+            color: $main_success;
+            line-height: 1.231;
+            margin: 20px 0;
+            letter-spacing: 2px;
+            transition: color .3s ease;
+
+            a:hover {
+                color: $main_primary;
+            }
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    .image_content_block .service_list {
+        margin-right: 40px;
+    }
+}
+
+@media (max-width: 991px) {
+    .image_content_block {
+        align-items: center;
+
+        .text_block {
+            display: none;
+        }
+    
+        .service_list {
+            margin-right: 0;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .image_content_block {
+        padding: 0 30px 70px;
+    }
+}
+
+@media (max-width: 650px) {
+    .image_content_block {
+        flex-direction: column;
+    
+        .service_list {
+            min-width: 1px;
+            max-width: max-content;
+        }
     }
 }
 // end services page
