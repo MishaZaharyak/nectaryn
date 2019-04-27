@@ -277,3 +277,18 @@ body {
         max-width: 285px;        
     }
 }
+
+.list_style_1 {
+    li {
+        font-size: 13px;
+        color: $main_success;
+        line-height: 1.231;
+        margin: 20px 0;
+        letter-spacing: 2px;
+        transition: color .3s ease;
+
+        a:hover {
+            color: $main_primary;
+        }
+    }
+}
