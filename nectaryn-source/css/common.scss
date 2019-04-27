@@ -919,6 +919,14 @@ main {
         overflow: hidden;
         height: max-content;
 
+        &.small {
+            flex: 1;
+        }
+
+        &.big {
+            flex: 1.5;
+        }
+
         &:hover {
             img {
                 opacity: 1;
@@ -940,6 +948,7 @@ main {
         img {
             opacity: .5;
             transition: all .5s ease;
+            height: 100%;
         }
 
         .description {
@@ -1008,6 +1017,8 @@ main {
         flex: 33.333%;
         max-width: 33.333%;
         padding: 0 4px;
+        display: flex;
+        flex-direction: column;
 
         img {
             margin-top: 8px;
@@ -1033,10 +1044,15 @@ main {
                 flex: 100%;
                 max-width: 100%;
                 display: flex;
+                flex-direction: row;
                 padding: 0;
 
                 .item {
                     padding: 0 4px;
+            
+                    &.big {
+                        flex: 1;
+                    }
                 }
             }
         }
@@ -1085,6 +1101,16 @@ main {
 
                 .item {
                     padding: 0;
+                }
+            }
+
+            .item {
+                &.small {
+                    flex: 1;
+                }
+        
+                &.big {
+                    flex: 1;
                 }
             }
 
