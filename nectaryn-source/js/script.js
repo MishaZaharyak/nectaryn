@@ -130,3 +130,41 @@ $(document).on('click', '.navigation a', e => {
 $('.navbar-brand').on('click', function(e) {
   $('.navigation a').each((i, el) => $(el).parent().removeClass('active'))
 })
+
+// portfolio grid
+var grid = $('.our_works');
+
+if (grid.length) {
+  $(document).ready(function() {
+      initGrid(grid)
+  });
+
+  $(window).resize(function() {
+      initGrid(grid)
+  })
+
+}
+
+function initGrid(grid) {
+  var windowWidth = window.innerWidth;
+  var width;
+
+  if (windowWidth > 459) {
+    width = 200;
+
+    if (windowWidth > 767) {
+      width = 300;
+    }
+
+    if (windowWidth > 1099) {
+      width = 330;
+    }
+
+    $(grid).gridalicious({
+      gutter: 10,
+      width: width,
+      selector: '.item',
+      animate: true,
+    });
+  }
+}
