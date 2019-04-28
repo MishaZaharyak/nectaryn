@@ -88,12 +88,21 @@
   padding: 0 30px 0 90px;
   max-width: 1628px;
   margin: 0 auto;
+  position: static;
   -webkit-transition: all .3s ease, padding-top .5s ease;
   transition: all .3s ease, padding-top .5s ease;
 }
 
 .topMenu.fixedNav .navigation li {
   padding: 12px 17px;
+}
+
+.topMenu.fixedNav .navigation li.has_children .dropdown_menu {
+  top: 60px;
+}
+
+.topMenu.fixedNav .navigation li.has_children:hover .dropdown_menu {
+  top: 47px;
 }
 
 .topMenu .logo {
