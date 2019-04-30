@@ -442,13 +442,18 @@ main {
             .article {
                 margin: 0 0 50px;
 
+                .image a div {
+                    max-width: 290px;
+                    max-height: 190px;
+                }
+
                 &:hover > div {
                     &::before {
                         z-index: -1;
                         height: calc(100% + 116px);
                     }
-    
-                    img {
+
+                    a div {
                         opacity: 1;
                     }
                 }
@@ -459,7 +464,7 @@ main {
     .article {
         margin: 0 8px 30px;
 
-        & > div {
+        .image {
             padding: 10px 10px 0;
             position: relative;
 
@@ -482,19 +487,10 @@ main {
                     z-index: -1;
                 }
 
-                img {
+                a div {
                     opacity: 1;
                 }
             }
-        }
-
-        img {
-            max-width: 305px;
-            max-height: 200px;
-            width: 100%;
-            border-radius: 3px;
-            opacity: .4;
-            transition: all .5s ease;
         }
 
         h4 {
@@ -541,12 +537,39 @@ main {
         }
     }
 
+    .image a div {
+        max-width: 305px;
+        max-height: 200px;
+        margin: auto;
+        height: 100vh;
+        width: 100vw;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 3px;
+        opacity: .4;
+        transition: all .5s ease;
+    }
+
     h2 {
         margin: 0 auto 50px;
     }
 
     button {
         margin-top: 10px;
+    }
+}
+
+@media (max-width: 1180px) {
+    .latest_articles .image a div {
+        max-width: 240px !important;
+        max-height: 156px !important;
+    }
+}
+
+@media (max-width: 1050px) and (min-width: 992px) {
+    .latest_articles > div.articles_list .article {
+        padding: 0 10px;
     }
 }
 
@@ -562,14 +585,20 @@ main {
 }
 
 @media (max-width: 767px) {
-    .latest_articles .article  > div {
+    .latest_articles .article  .image {
         &::before {
             z-index: -1;
         }
 
-        img {
+        a div {
             opacity: 1;
         }
+    }
+}
+
+@media (max-width: 400px) {
+    .latest_articles > div.articles_list .article {
+        padding: 0;
     }
 }
 // end latest articles
@@ -616,7 +645,7 @@ main {
             background-color: transparent;
             color: $black;
             font-weight: 800;
-            font-size: 16px;
+            font-size: 15px;
         }
 
         &:hover:not(.active) .page-link {
@@ -625,7 +654,7 @@ main {
 
             &.page {
                 font-weight: 700;
-                font-size: 13px;  
+                font-size: 15px;  
             }
 
             &.prev, &.next {
@@ -918,7 +947,7 @@ main {
         position: relative;
         overflow: hidden;
         height: max-content;
-
+        
         &.small {
             flex: 1;
         }
@@ -2144,7 +2173,7 @@ main {
             text-transform: uppercase;    
             transition: all .3s ease;
             
-            &:hover {
+            &:hover, &.active {
                 font-weight: 800;
             }
         }
