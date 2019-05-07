@@ -304,8 +304,8 @@ body::-webkit-scrollbar-thumb {
   color: #333;
 }
 
-.breadCrumb.breadCrumb_dark span.angle svg {
-  fill: #333;
+.breadCrumb.breadCrumb_dark li:not(:last-child)::after {
+  background-image: url("../images/right-arrow.svg");
 }
 
 .breadCrumb span {
@@ -326,11 +326,15 @@ body::-webkit-scrollbar-thumb {
   color: #fa7268;
 }
 
-.breadCrumb span.angle svg {
-  height: 7px;
-  width: 10px;
-  fill: white;
-  margin-bottom: 1px;
+.breadCrumb li:not(:last-child)::after {
+  content: '';
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  background-size: 7px 7px;
+  background-image: url("../images/right-arrow-white.svg");
+  background-repeat: no-repeat;
+  background-position: center 100%;
 }
 
 .quote h4 {
