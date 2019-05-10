@@ -8,6 +8,11 @@ body {
     transition: padding .5s ease;
     color: $black;
 
+    &.modal-open {
+        padding-top: 0;
+        overflow: hidden;
+    }
+
     &.fixedNav {
         padding-top: 56px;
     }
@@ -293,6 +298,146 @@ body {
 
         a:hover {
             color: $main_primary;
+        }
+    }
+}
+
+.blur.active {
+    filter: blur(14px);
+    padding-top: 120px;
+}
+
+@media (max-width: 500px) {
+    .blur.active {
+        padding-top: 80px;
+    }
+}
+
+.modal-fone {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    z-index: 2000;
+    font-family: $SFCompact;
+    overflow: auto;
+    opacity: 0;
+    transform: scale(.8);
+    display: none;
+    transition: opacity .5s ease, transform .5s ease;
+
+    &.open {
+        display: flex;
+        justify-content: center;
+    }
+
+    &.open-active {
+        opacity: 1;
+        transform: scale(1);
+        transition: opacity .5s ease, transform .5s ease;
+    }
+
+    .register-cont {
+        display: flex;
+        align-items: center;
+    }
+
+    .inner_cont {
+        position: relative;
+        z-index: 2005;
+    }
+
+    h2 {
+        line-height: 1;
+        margin-right: 60px;
+        max-width: 180px;
+
+        &::before {
+            left: -22px;
+        }
+    }
+
+    form {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 100%;
+        margin-top: 40px;
+        transition: all .3s ease;
+    }
+
+    .input_cont {
+        display: flex;
+        justify-content: space-between;
+        max-width: 495px;
+        width: 100vw;
+    }
+
+    button[type=submit] {
+        padding: 6px 20px;
+        margin-top: 50px;
+    }
+
+    .label-group {
+        position: relative;
+    }
+
+    label {
+        margin-bottom: 0;
+        position: absolute;
+        top: 0;
+        transition: all .3s ease;
+        color: $black;
+        font-size: 16px;
+
+        &.focus {
+            top: -20px;
+            color: $secondary_light;
+            font-size: 12px;
+        }
+    }
+
+    input {
+        background-color: transparent;
+        padding-bottom: 4px;
+        border: 0;
+        border-bottom: 2px solid $black;
+        width: 212px;
+        color: $secondary_2;
+        font-size: 16px;
+        outline: none;     
+        position: relative;
+        transition: all .3s ease;
+    }
+}
+
+@media (max-width: 767px) {
+    .modal-fone {
+    
+        form {
+            align-items: center;
+        }
+    
+        .input_cont {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h2 {
+            margin-right: 0;
+            margin-bottom: 45px;
+            max-width: none;
+            text-align: center;
+            padding: 0 30px;
+
+            &::before {
+                display: none;
+            }
+        }
+    
+        .label-group:last-child {
+            margin-top: 50px;
         }
     }
 }

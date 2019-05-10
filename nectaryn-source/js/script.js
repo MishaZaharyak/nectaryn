@@ -63,7 +63,7 @@ $(document).ready(function() {
   openMobileSubmenu();
 
   // feedback input animation
-  var feedback = $('.feedback');
+  var feedback = $('.feedback, .registration ');
 
   if (feedback) {
     feedback.find('input').each(function() {
@@ -168,3 +168,60 @@ function initGrid(grid) {
     });
   }
 }
+
+var closeWindow;
+
+// open modal window and close it if autoclose set to true
+function openModalWindow(selector, autoclose=false) {
+  var modalWindow = document.querySelector(selector);
+  var blur = document.querySelector('.blur');
+
+  if (autoclose) clearInterval(closeWindow);
+
+  modalWindow.classList.add('open');
+
+  setTimeout(function() {
+
+    if (modalWindow.classList.contains('open')) {
+      modalWindow.classList.add('open-active');
+      blur.classList.add('active');
+      document.body.classList.add('modal-open')
+    }
+  }, 100)
+
+  if (autoclose) {
+    closeWindow = setInterval(function() {
+      closeModalWindow(modalWindow)
+    }, 4000)
+  }
+}
+
+// close modal window 
+function closeModalWindow(selector) {
+  var modal = document.querySelector(selector);
+  var blur = document.querySelector('.blur');
+  modal.classList.remove('open-active');
+  blur.classList.remove('active');
+  document.body.classList.remove('modal-open')
+
+  setTimeout(function() {
+
+    if (!modal.classList.contains('open-active')) {
+      modal.classList.remove('open');
+    }
+  }, 500)
+}
+
+$('.registration, .register-cont').on('click', function(e) {
+  e.stopPropagation();
+  var condition = $(e.target).get(0) === $('.inner_cont').get(0) || $(e.target).closest('.inner_cont').length > 0;
+  if(!condition) {
+    closeModalWindow('.registration')
+  }
+})
+
+$('#callback_btn').on('click', function(e) {
+  e.preventDefault();
+  e.stopPropagation();
+  openModalWindow('.registration');
+})

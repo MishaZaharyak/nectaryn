@@ -79,6 +79,11 @@ body {
   color: #333;
 }
 
+body.modal-open {
+  padding-top: 0;
+  overflow: hidden;
+}
+
 body.fixedNav {
   padding-top: 56px;
 }
@@ -386,5 +391,178 @@ body::-webkit-scrollbar-thumb {
 
 .list_style_1 li a:hover {
   color: #9ee5e5;
+}
+
+.blur.active {
+  -webkit-filter: blur(14px);
+          filter: blur(14px);
+  padding-top: 120px;
+}
+
+@media (max-width: 500px) {
+  .blur.active {
+    padding-top: 80px;
+  }
+}
+
+.modal-fone {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  z-index: 2000;
+  font-family: "SFCompact";
+  overflow: auto;
+  opacity: 0;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  display: none;
+  -webkit-transition: opacity .5s ease, -webkit-transform .5s ease;
+  transition: opacity .5s ease, -webkit-transform .5s ease;
+  transition: opacity .5s ease, transform .5s ease;
+  transition: opacity .5s ease, transform .5s ease, -webkit-transform .5s ease;
+}
+
+.modal-fone.open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modal-fone.open-active {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: opacity .5s ease, -webkit-transform .5s ease;
+  transition: opacity .5s ease, -webkit-transform .5s ease;
+  transition: opacity .5s ease, transform .5s ease;
+  transition: opacity .5s ease, transform .5s ease, -webkit-transform .5s ease;
+}
+
+.modal-fone .register-cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal-fone .inner_cont {
+  position: relative;
+  z-index: 2005;
+}
+
+.modal-fone h2 {
+  line-height: 1;
+  margin-right: 60px;
+  max-width: 180px;
+}
+
+.modal-fone h2::before {
+  left: -22px;
+}
+
+.modal-fone form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
+  margin-top: 40px;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.modal-fone .input_cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 495px;
+  width: 100vw;
+}
+
+.modal-fone button[type=submit] {
+  padding: 6px 20px;
+  margin-top: 50px;
+}
+
+.modal-fone .label-group {
+  position: relative;
+}
+
+.modal-fone label {
+  margin-bottom: 0;
+  position: absolute;
+  top: 0;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  color: #333;
+  font-size: 16px;
+}
+
+.modal-fone label.focus {
+  top: -20px;
+  color: #666;
+  font-size: 12px;
+}
+
+.modal-fone input {
+  background-color: transparent;
+  padding-bottom: 4px;
+  border: 0;
+  border-bottom: 2px solid #333;
+  width: 212px;
+  color: #343434;
+  font-size: 16px;
+  outline: none;
+  position: relative;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+@media (max-width: 767px) {
+  .modal-fone form {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .modal-fone .input_cont {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .modal-fone h2 {
+    margin-right: 0;
+    margin-bottom: 45px;
+    max-width: none;
+    text-align: center;
+    padding: 0 30px;
+  }
+  .modal-fone h2::before {
+    display: none;
+  }
+  .modal-fone .label-group:last-child {
+    margin-top: 50px;
+  }
 }
 /*# sourceMappingURL=commonClasses.css.map */
