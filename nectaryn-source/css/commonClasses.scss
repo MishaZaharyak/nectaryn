@@ -8,6 +8,10 @@ body {
     transition: padding .5s ease;
     color: $black;
 
+    &.opened-menu {
+        overflow: hidden;
+    }
+
     &.modal-open {
         padding-top: 0;
         overflow: hidden;

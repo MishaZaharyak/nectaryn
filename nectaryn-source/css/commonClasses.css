@@ -79,6 +79,10 @@ body {
   color: #333;
 }
 
+body.opened-menu {
+  overflow: hidden;
+}
+
 body.modal-open {
   padding-top: 0;
   overflow: hidden;

@@ -101,6 +101,7 @@ $(document).ready(function() {
 
         if ($(fullWidthMenu).hasClass('show')) {
           $(fullWidthMenu).addClass('show-active');
+          $('body').addClass('opened-menu');
         }
       }, 100)
 
@@ -109,6 +110,7 @@ $(document).ready(function() {
       $(languages).removeClass('hide');
 
       $(fullWidthMenu).removeClass('show-active');
+      $('body').removeClass('opened-menu');
 
       setTimeout(function() {
 
