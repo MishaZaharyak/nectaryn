@@ -147,9 +147,9 @@ main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 100%;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
+  width: 100%;
 }
 
 .feedback button[type=submit] {
@@ -3215,6 +3215,107 @@ main {
   .image_content_block_2 button {
     display: block;
     margin: 30px auto 0;
+  }
+}
+
+.simple_block_wraper {
+  background: -webkit-gradient(linear, left bottom, left top, from(#e2f7f7), to(#f7e2e2));
+  background: linear-gradient(0deg, #e2f7f7 0%, #f7e2e2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7e2e2', endColorstr='#e2f7f7',GradientType=0 );
+}
+
+.simple_block {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 45px 0 20px 90px;
+}
+
+@media (max-width: 767px) {
+  .simple_block {
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center;
+  }
+  .simple_block h2 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.text_content_block_wraper {
+  position: relative;
+}
+
+.text_content_block_wraper::after {
+  content: '';
+  background-image: url("../images/plant-6.png");
+  background-repeat: no-repeat;
+  background-size: 39% auto;
+  background-position: calc(100% + 100px) 100px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: -100px;
+}
+
+.text_content_block {
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  font-family: "SFCompact";
+  padding: 30px 0 60px 90px;
+}
+
+.text_content_block .inner_block {
+  max-width: 850px;
+}
+
+.text_content_block .images {
+  margin: 50px 0;
+  max-height: 350px;
+}
+
+.text_content_block .images img:last-child {
+  margin-left: 50px;
+}
+
+.text_content_block p, .text_content_block ul, .text_content_block ol {
+  font-size: 11px;
+  font-family: "SFCompactText";
+  color: #343434;
+  line-height: 1.364;
+  margin-bottom: 10px;
+}
+
+.text_content_block ol, .text_content_block ul {
+  padding-left: 30px;
+}
+
+.text_content_block h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #343434;
+}
+
+@media (max-width: 1300px) {
+  .text_content_block_wraper::after {
+    background-image: none;
+  }
+  .text_content_block {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .text_content_block .inner_block {
+    max-width: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .text_content_block {
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 /*# sourceMappingURL=common.css.map */
